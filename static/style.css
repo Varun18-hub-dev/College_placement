@@ -1,0 +1,83 @@
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-image:url(/static/images/vadim-sherbakov-d6ebY-faOO0-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.Main_card{
+    padding: 5px;
+    height: 680px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px black solid;
+    background: rgba(161, 158, 158, 0.142);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    
+    
+}
+input{
+    width: 100%;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+label{
+    font-size: large;
+}
+.IQ,.cgpa,.academic,.intership,.communication,.projects{
+    margin: 8px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+button,.button_link{
+    width: 70px;
+    height: 30px;
+    background-color: rgb(197, 246, 73);
+    border: none;
+    align-self: center;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+.button_link{
+    padding-top: 5px;
+}
+button:hover{
+    background-color: aquamarine;
+}
+.button_link:hover{
+    background-color: aquamarine;
+}
+
+#button{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.result {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: white;
+    font-size: 1.1em;
+    text-align: center;
+}

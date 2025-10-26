@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    
+</head>
+<body>
+    <div class="Main_card">
+        <h1>College Placement Predictor</h1>
+        <p>“Predict your campus placement chances based on academic and skill data.”</p>
+        <form action="/predict" method="POST">
+            <div class="IQ">
+                <label for="IQ" >IQ : </label>
+                <input type="number" name="IQ" placeholder="eg: IQ" value="{{iq or ''}}">
+            </div>
+            <div class="cgpa">
+                <label for="cgpa" >CGPA : </label>
+                <input type="number" name="cgpa" placeholder="10.0" value="{{cgpa or ''}}">
+            </div>
+            <div class="academic">
+                <label for="Academic_performance" >Academic performance : </label>
+                <input type="number" name="Academic_performance" placeholder="ranges from 0 to 10" value="{{academic or ''}}">
+            </div>
+            <div class="intership">
+                <label for="Internship_Experience" >Internship Experience : </label>
+                <input type="number" name="Internship_Experience"
+                placeholder="ranges from 0 to 10" value="{{intership or ''}}">
+            </div>
+            <div class="communication">
+                <label for="Communication_Skills" >Communication Skills : </label>
+                <input type="number" name="Communication_Skills"
+                placeholder="ranges from 0 to 10" value="{{communication or ''}}">
+            </div>
+            <div class="projects">
+                <label for="Projects_Completed" >Projects Completed : </label>
+                <input type="number" name="Projects_Completed"
+                placeholder="ranges from 0 to 10" value="{{project or ''}}">
+            </div>
+            <section id="button">
+                <a href="{{ url_for('refresh') }}" class="button_link">Refresh</a>
+                <button type="submit">Predict</button>
+            </section>
+            
+        </form>
+        {% if predicted_text %}
+            <div class="result">
+                <h3>{{predicted_text}}</h3>
+            </div>
+        {% endif %}
+    </div>
+    
+</body>
+</html>
