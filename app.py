@@ -9,7 +9,7 @@ model = joblib.load('model/Placement_revised_model.pkl')
 
 @app.route('/')
 def home():
-    # Serves the clean form
+
     return render_template('index.html')
 
 @app.route('/predict',methods=['POST'])
