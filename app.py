@@ -10,7 +10,7 @@ model = joblib.load('model/Placement_revised_model.pkl')
 @app.route('/')
 def home():
 
-    return render_template('index.html')
+    return "Flask app deployed successfully on Vercel!"
 
 @app.route('/predict',methods=['POST'])
 def predict():
